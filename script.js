@@ -2,15 +2,32 @@
 var generateBtn = document.querySelector("#generate");
 
 function writePassword() {
-  var strings;
+  var upper;
   if (confirm("Would You Like Your Password to Include Lower Case Letters?")) {
-    (confirm("Would You Like Your Password to Include Upper Case Letters?"))
-      (confirm("Would You Like Your Password to Include Numbers?")
-        (confirm("Would You Like Your Password to Include Special Characters?")
-          (prompt("How Many Characters Would You Like to Include in Your Password?"))))
-  }
-}  
 
+  }
+
+  var lower;
+  if (confirm("Would You Like Your Password to Include Upper Case Letters?")) {
+    
+  }
+
+  var numbers;
+  if (confirm("Would You Like Your Password to Include Numbers?")) {
+
+  }
+
+  var characters;      
+  if (confirm("Would You Like Your Password to Include Special Characters?")) {
+
+  }
+  
+  var length;
+  if (prompt("How Many Characters Would You Like to Include in Your Password?")) {
+
+  }
+
+}
     
   
   
