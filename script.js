@@ -1,8 +1,8 @@
 // Assignment Code
-// var generateBtn = document.querySelector("#generate");
+var generateBtn = document.querySelector("#generate");
 
-function options() {
-  var undefined;
+function writePassword() {
+  var strings;
   if (confirm("Would You Like Your Password to Include Lower Case Letters?")) {
     (confirm("Would You Like Your Password to Include Upper Case Letters?"))
       (confirm("Would You Like Your Password to Include Numbers?")
@@ -22,4 +22,4 @@ function options() {
 //   passwordText.value = password;
 // }
 // Add event listener to generate button
-// generateBtn.addEventListener("click", writePassword);
+generateBtn.addEventListener("click", writePassword);
