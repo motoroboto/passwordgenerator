@@ -2,12 +2,14 @@
 var generateBtn = document.querySelector("#generate");
 
 function writePassword() {
-  var upper;
-  if (confirm("Would You Like Your Password to Include Lower Case Letters?")) {
+  var lower;
+  if (confirm("Would You Like Your Password to Include Lower Case Letters?"))
+    function getRandomLowerCase(){
+      return String.fromCharCode(Math.floor(Math.random()*26)+97);
 
   }
 
-  var lower;
+  var upper;
   if (confirm("Would You Like Your Password to Include Upper Case Letters?")) {
     
   }
@@ -22,12 +24,10 @@ function writePassword() {
 
   }
   
-  var length;
-  if (prompt("How Many Characters Would You Like to Include in Your Password?")) {
-
-  }
-
+  var length = Number(prompt("How many characters would you like your password to be?"));
+  while (isNaN(length) || length < 8 || length > 128) length = Number(prompt("Length must be 8-128 characters. How many characters would you like your password to be?"));
 }
+
     
   
   
