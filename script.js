@@ -1,34 +1,27 @@
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
+var lowerString = 'a b c d e f g h i j k l m n o p q r s t u v w x y z';
+var lowers = lowerString.split(" ");
+var upperString = 'A B C D E F G H I J K L M N O P Q R S T U V W X Y Z'
+var uppers = upperString.split(" ")
+var numberString = '1 2 3 4 5 6 7 8 9 0'
+var numbers = numberString.split(" ")
+var characterString = '! @ # $ % ^ & * ( )'
+var characters = characterString.split(" ")
 
-function writePassword() {
-  var lower;
-  if (confirm("Would You Like Your Password to Include Lower Case Letters?"))
-    function getRandomLowerCase(){
-      return String.fromCharCode(Math.floor(Math.random()*26)+97);
-
-  }
-
-  var upper;
-  if (confirm("Would You Like Your Password to Include Upper Case Letters?")) {
-    
-  }
-
-  var numbers;
-  if (confirm("Would You Like Your Password to Include Numbers?")) {
-
-  }
-
-  var characters;      
-  if (confirm("Would You Like Your Password to Include Special Characters?")) {
-
-  }
-  
+function generatePassword() {
+  var lowerConfirm = confirm("Would You Like Your Password to Include Lower Case Letters?");
+  var upperConfirm = confirm("Would You Like Your Password to Include Upper Case Letters?");
+  var numberConfirm = confirm("Would You Like Your Password to Include Numbers?");
+  var characterConfirm = confirm("Would You Like Your Password to Include Special Characters?");
   var length = Number(prompt("How many characters would you like your password to be?"));
   while (isNaN(length) || length < 8 || length > 128) length = Number(prompt("Length must be 8-128 characters. How many characters would you like your password to be?"));
 }
 
-    
+// if (lowerConfirm === true) {
+//   allowedChars=allowedChars.concat(lowers);
+//   console.log(allowedChars);
+// }
   
   
 
@@ -39,4 +32,4 @@ function writePassword() {
 //   passwordText.value = password;
 // }
 // Add event listener to generate button
-generateBtn.addEventListener("click", writePassword);
+generateBtn.addEventListener("click", generatePassword);
